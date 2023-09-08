@@ -1,11 +1,10 @@
 const origin = window.location.origin + '/~icordova';
 
 const pageMap = new Map<string, string>([
-    [ `${origin}/`, 'Home with CSS' ],
-    [ `${origin}/no-css/`, 'Home without CSS'],
+    [ `${origin}/`, 'Landing' ],
     [ `${origin}/projects/`, 'Projects' ],
     [ `${origin}/qualifications/`, 'Qualifications' ],
-    [ `${origin}/service/`, 'Service Work' ],
+    [ `${origin}/service/`, 'Service' ],
     [ `${origin}/ai-generated/`, 'AI Generated' ]
 ])
 
@@ -38,6 +37,10 @@ export class Navbar extends HTMLElement {
 
             this.container.append(navbarElement)
         }
+
+        let themeSelector = document.createElement('ic-themes');
+
+        this.container.append(themeSelector)
     }
 }
 
