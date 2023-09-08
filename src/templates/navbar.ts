@@ -11,38 +11,30 @@ const pageMap = new Map<string, string>([
 
 export class Navbar extends HTMLElement {
     
-    container: HTMLUListElement;
+    container: HTMLDivElement;
 
     constructor() {
         super();
 
-        this.container = document.createElement('ul');
+        this.container = document.createElement('div');
 
         this.container.classList.add('ic-navbar-container');
 
         this.append(this.container)
 
-        this.build();
-    }
-
-    async build() {
-
         for(const [ pageURL, pageName ] of pageMap) {
 
-            let navbarElement = document.createElement('li');
+            let navbarElement = document.createElement('a');
             navbarElement.classList.add('ic-navbar-element');
 
-            let navbarElementLink = document.createElement('a')
-            navbarElementLink.href = pageURL;
-            navbarElementLink.innerHTML = pageName;
-            navbarElementLink.classList.add('ic-navbar-element-link');
+            navbarElement.href = pageURL;
+            navbarElement.innerHTML = pageName;
+            navbarElement.classList.add('ic-navbar-element-link');
 
             if(pageURL == window.location.href) {
 
-                navbarElementLink.classList.add('ic-navbar-element-current');
+                navbarElement.classList.add('ic-navbar-element-current');
             }
-
-            navbarElement.append(navbarElementLink)
 
             this.container.append(navbarElement)
         }

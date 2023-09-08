@@ -1,0 +1,74 @@
+:root {
+    --maroon: #500000;
+    --dmaroon: #3C0000;
+    --white: #FFFFFF;
+    --brass: #998542;
+    --link: #006483;
+    --hover: #004362;
+    --dgray: #202020;
+    --lgray: #333333;
+    --black: #000000;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+
+    font-family: 'Fira Code', monospace;
+}
+
+body {
+    background-color: var(--dgray);
+}
+
+.vflex {
+    background-color: var(--lgray);
+    margin: 1%;
+    padding: 1%;
+}
+
+.ic-navbar-container {
+
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: stretch;
+    position: sticky;
+    top: 0;
+
+    background-color: var(--maroon);
+
+    flex-wrap: wrap;
+}
+
+.ic-navbar-element {
+    display: inline-block;
+    margin: 10px 20px;
+    padding: 5px 10px;
+    text-decoration: none;
+    background-color: var(--maroon);
+    color: var(--white);
+    border-radius: 5px;
+
+    border-color: var(--lgray);
+
+    user-select: none;
+}
+
+.ic-navbar-element:hover {
+
+    background-color: var(--dmaroon);
+    color: var(--white);
+}
+
+.ic-navbar-element-current {
+    background-color: var(--brass);
+    color: var(--white);
+
+    pointer-events: none;
+    user-select: none;
+}

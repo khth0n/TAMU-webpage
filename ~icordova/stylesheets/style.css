@@ -1,0 +1,118 @@
+:root {
+
+    --primary: #303036;
+    --secondary: #2667ff;
+    --secondary-light: #3f8efc;
+    --tamu: #500000;
+}
+
+* {
+    font-family: 'Fira Code', monospace;
+}
+
+.vflex,
+.hflex,
+.flex {
+
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.vflex {
+    flex-direction: column;
+}
+
+.hflex {
+    flex-direction: row;
+}
+
+.greeting {
+    align-self: center;
+}
+
+ic-typer {
+    align-self: center;
+}
+
+.block {
+    background-color: chartreuse;
+    width: 75vw
+}
+
+input {
+    width: 100%;
+}
+
+img {
+    aspect-ratio: auto 1 / 1;
+
+    width: 90vw;
+    height: 50vh;
+}
+
+
+.container {
+    align-self: center;
+}
+
+.overlay {
+    position: absolute;
+    
+}
+
+.ic-navbar-container {
+
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: stretch;
+    position: sticky;
+    top: 0;
+
+    background-color: var(--tamu);
+
+    flex-wrap: wrap;
+}
+
+.ic-navbar-element {
+    display: inline-block;
+    margin: 10px 20px;
+    padding: 5px 10px;
+    text-decoration: none;
+    background-color: var(--secondary-light);
+    color: red;
+    border-radius: 5px;
+
+    user-select: none;
+}
+
+.ic-navbar-element:hover {
+
+    background-color: var(--secondary);
+}
+
+.ic-navbar-element-current {
+    background-color: #fb3640;
+    color: green;
+
+    pointer-events: none;
+    user-select: none;
+}
+
+h3 {
+    display: inline;
+}
+
+body {
+    background-color: var(--primary);
+    margin: 0;
+    padding: 0;
+}
