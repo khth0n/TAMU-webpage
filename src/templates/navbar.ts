@@ -9,17 +9,35 @@ const pageMap = new Map<string, string>([
 ])
 
 export class Navbar extends HTMLElement {
-    
-    container: HTMLDivElement;
 
     constructor() {
         super();
 
-        this.container = document.createElement('div');
+        let collapseButton = document.createElement('button');
+        collapseButton.innerHTML = 'Collapse'
 
-        this.container.classList.add('ic-navbar-container');
+        collapseButton.addEventListener('click', (ev: MouseEvent) => {
 
-        this.append(this.container)
+            let elements = this.getElementsByTagName('a');
+
+            for(let element of elements) {
+
+                if(element.classList.contains('collapsed')) {
+
+                    
+                    this.classList.remove('rolled');
+                    element.classList.remove('collapsed');
+                    collapseButton.innerHTML = 'Collapse';
+                } else {
+
+                    this.classList.add('rolled');
+                    element.classList.add('collapsed');
+                    collapseButton.innerHTML = 'Expand';
+                }
+            }
+        });
+
+        this.append(collapseButton);
 
         for(const [ pageURL, pageName ] of pageMap) {
 
@@ -35,12 +53,12 @@ export class Navbar extends HTMLElement {
                 navbarElement.classList.add('ic-navbar-element-current');
             }
 
-            this.container.append(navbarElement)
+            this.append(navbarElement);
         }
 
         let themeSelector = document.createElement('ic-themes');
 
-        this.container.append(themeSelector)
+        this.append(themeSelector)
     }
 }
 

@@ -7,18 +7,15 @@ const themeMap = new Map<string, string>([
 
 export class ThemeSelector extends HTMLElement {
 
-    container: HTMLDivElement;
     button: HTMLButtonElement;
 
     constructor() {
         super();
 
-        this.container = document.createElement('div');
-
         this.button = document.createElement('button');
-        this.button.innerHTML = 'Styles';
+        this.button.innerHTML = 'Styling';
 
-        this.container.append(this.button);
+        this.append(this.button);
 
         let savedTheme = localStorage.getItem('theme');
         
@@ -28,12 +25,11 @@ export class ThemeSelector extends HTMLElement {
             theme.setAttribute('href', savedTheme);
         }
 
-        let themeOption: HTMLAnchorElement;
+        let themeOption: HTMLButtonElement;
 
         for(const [ fileURL, name ] of themeMap) {
 
-            themeOption = document.createElement('a');
-            themeOption.href = '#';
+            themeOption = document.createElement('button');
             themeOption.innerHTML = name;
 
             themeOption.addEventListener('click', (ev: MouseEvent) => {
@@ -42,14 +38,52 @@ export class ThemeSelector extends HTMLElement {
                 let theme = document.getElementById('theme') as HTMLStyleElement;
 
                 theme.setAttribute('href', fileURL);
+
+                this.dispatchEvent(new MouseEvent('mouseout'));
             });
 
             themeOption.classList.add('hidden');
 
-            this.container.append(themeOption);
+            this.append(themeOption);
         }
 
-        this.append(this.container);
+        this.button.addEventListener('click', (ev: MouseEvent) => {
+
+            this.dispatchEvent(new MouseEvent('mouseover'));
+        });
+
+        this.addEventListener('mouseover', (ev: MouseEvent) => {
+
+            let theme = (document.getElementById('theme') as HTMLStyleElement).getAttribute('href')!;
+            let themeName = themeMap.get(theme);
+
+            for(let element of this.getElementsByTagName('button')) {
+
+                element.classList.remove('hidden');
+
+                if(element.innerHTML === themeName) {
+
+                    element.classList.add('current-theme');
+                } else {
+
+                    element.classList.add('option-theme');
+                }
+            }
+
+            this.button.classList.add('hidden');
+        });
+
+        this.addEventListener('mouseout', (ev: MouseEvent) => {
+
+            for(let element of this.getElementsByTagName('button')) {
+
+                element.classList.add('hidden');
+                element.classList.remove('current-theme');
+                element.classList.remove('option-theme');
+            }
+
+            this.button.classList.remove('hidden');
+        });
     }
 }
 
