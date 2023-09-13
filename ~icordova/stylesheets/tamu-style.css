@@ -1,3 +1,7 @@
+/*
+Shared CSS
+*/
+
 :root {
     --maroon: #500000;
     --dmaroon: #3C0000;
@@ -18,7 +22,20 @@
 }
 
 body {
+    margin: 10vh 4vh;
     background-color: var(--dgray);
+}
+
+a {
+
+    color: var(--link);
+
+    text-decoration: none;
+}
+
+a:hover {
+
+    color: var(--hover);
 }
 
 .alt-flex,
@@ -64,6 +81,7 @@ ic-navbar {
 
     position: fixed;
     top: 0;
+    left: 0;
     width: 100%;
 
     background-color: var(--maroon);
@@ -144,30 +162,47 @@ ic-themes {
     background-color: #500000;
 }
 
-#main {
-    margin: 10vh 4vh;
-}
+
+/*
+Landing Page CSS
+*/
 
 #greeting-container { 
     justify-content: space-evenly;
 
     padding: 4vh 1vh;
 
-    background-color: var(--lgray);
-
     border-radius: 10vh;
+}
+
+#greeting {
+
+    background-color: var(--brass);
+    color: var(--white);
+
+    padding: 5vh;
+
+    width: 40vw;
+
+    border-radius: 0 10vh;
+    box-shadow: 1vh 1vh var(--lgray);
+
+    text-wrap: wrap;
 }
 
 #headshot {
 
     background-color: var(--maroon);
-    width: fit-content;
-
-    align-items: center;
-    border-radius: 10vw 0;
-    padding: 10vh;
 
     margin: 5vh;
+    padding: 10vh;
+
+    width: fit-content;
+
+    border-radius: 10vw 0;
+    box-shadow: 1vh 1vh var(--lgray);
+
+    align-items: center;
 }
 
 #headshot img {
@@ -175,24 +210,92 @@ ic-themes {
 
     user-select: none;
 
-    border-radius: 25vh;
+    border-radius: 10vh 0;
 }
 
-#greeting {
+#headshot-caption {
 
+    align-items: center;
+}
+
+#headshot-caption * {
+
+    background-color: var(--white);
+
+    margin: 1vh;
     padding: 5vh;
 
-    background-color: var(--brass);
+    width: fit-content;
+    height: fit-content;
+
+    border-radius: 0 5vh;
+    box-shadow: -1vh 1vh var(--lgray);
+
+    text-align: center;
+}
+
+#contact-info {
+
     color: var(--white);
 
-    border-radius: 0 10vh;
-    width: 40vw;
+    padding: 5vh 0;
 
+    width: 100%;
+
+    align-items: center;
+
+    text-align: center;
     text-wrap: wrap;
 }
 
-#about-me {
+#contact-info h1 {
 
-    margin-top: 4vh;
-    background-color: var(--lgray)
+    background-color: var(--dmaroon);
+
+    margin: 1vh;
+    padding: 5vh;
+
+    width: fit-content;
+
+    border-radius: 10vh 0;
+    box-shadow: 1vh 1vh var(--lgray);
 }
+
+#contact-info-types {
+
+    justify-content: space-evenly;
+}
+
+#contact-info-types div {
+
+    align-items: center;
+}
+
+#contact-info-types div h1 {
+
+    background-color: var(--brass);
+}
+
+#contact-info-types div h2 {
+
+    background-color: var(--maroon);
+
+    margin: 1vh;
+    padding: 5vh;
+
+    border-radius: 0 10vh;
+    box-shadow: -1vh 1vh var(--lgray);
+}
+
+
+/*
+Projects Page CSS
+*/
+
+/*
+Qualifications Page CSS
+*/
+
+/*
+AI Generated Page CSS
+*/

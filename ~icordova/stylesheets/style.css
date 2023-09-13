@@ -125,7 +125,7 @@ ic-navbar button {
 
 .ic-navbar-element:hover {
 
-    background-color: var(--mblue);
+    background-color: var(--lblue);
 }
 
 .ic-navbar-element-current {
@@ -224,7 +224,7 @@ Landing Page CSS
     background-color: var(--offwhite);
 }
 
-.headshot-caption {
+#headshot-caption {
 
     margin: 2vh;
     padding: 2vh;
@@ -249,8 +249,7 @@ Landing Page CSS
 
 #contact-info-types {
 
-    justify-content: space-around;
-    
+    justify-content: space-evenly;
 }
 
 /*
