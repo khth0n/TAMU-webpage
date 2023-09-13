@@ -70,11 +70,9 @@ a:hover {
 }
 
 ic-navbar {
-    display: -webkit-box;
-    display: -moz-box;
-    display: -ms-flexbox;
-    display: -webkit-flex;
-    display: flex;
+
+    background-color: var(--maroon);
+
     flex-direction: row;
     justify-content: space-evenly;
     align-items: center;
@@ -84,9 +82,26 @@ ic-navbar {
     left: 0;
     width: 100%;
 
-    background-color: var(--maroon);
+    border-radius: 0 0 2vw 2vw;
 
     overflow: scroll;
+}
+
+ic-navbar button {
+
+    background-color: var(--maroon);
+    color: var(--white);
+
+    margin: 10px 20px;
+    padding: 5px 10px;
+
+    border-style: hidden;
+    border-radius: 5px;
+}
+
+ic-navbar button:hover {
+
+    background-color: var(--brass);
 }
 
 .ic-navbar-element {
@@ -152,14 +167,15 @@ ic-themes {
 
 .current-theme {
 
-    background-color: gray;
+    background-color: var(--maroon);
 
     pointer-events: none;
 }
 
 .option-theme {
 
-    background-color: #500000;
+    background-color: var(--white);
+    color: var(--dmaroon);
 }
 
 
