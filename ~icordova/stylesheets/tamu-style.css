@@ -21,35 +21,35 @@ body {
     background-color: var(--dgray);
 }
 
-.adaptive-flex-1,
-.adaptive-flex-2,
+.alt-flex,
+.alt-vflex,
+.alt-hflex,
 .vflex,
 .hflex,
 .flex {
+
     display: -webkit-box;
     display: -moz-box;
     display: -ms-flexbox;
     display: -webkit-flex;
     display: flex;
+    flex-wrap: wrap;
 }
 
-.adaptive-flex-1 {
-    flex-direction: row;
+.alt-hflex {
+    flex-direction: row-reverse;
 }
 
-.adaptive-flex-2 {
-    flex-direction: column;
+.alt-vflex {
+    flex-direction: column-reverse;
 }
 
 .vflex {
-    background-color: var(--lgray);
-    margin: 1vw;
-    padding: 1vw;
+    flex-direction: column;
 }
 
-header {
-    position: sticky;
-    top: 0;
+.hflex {
+    flex-direction: row;
 }
 
 ic-navbar {
@@ -60,11 +60,15 @@ ic-navbar {
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
-    align-items: stretch;
+    align-items: center;
+
+    position: fixed;
+    top: 0;
+    width: 100%;
 
     background-color: var(--maroon);
 
-    flex-wrap: wrap;
+    overflow: scroll;
 }
 
 .ic-navbar-element {
@@ -80,6 +84,8 @@ ic-navbar {
     border-color: var(--lgray);
 
     user-select: none;
+
+    white-space: nowrap;
 }
 
 .ic-navbar-element:hover {
@@ -114,6 +120,8 @@ ic-themes {
     display: -webkit-flex;
     display: flex;
 
+    flex-direction: column;
+
     justify-content: center;
 
     user-select: none;
@@ -134,4 +142,57 @@ ic-themes {
 .option-theme {
 
     background-color: #500000;
+}
+
+#main {
+    margin: 10vh 4vh;
+}
+
+#greeting-container { 
+    justify-content: space-evenly;
+
+    padding: 4vh 1vh;
+
+    background-color: var(--lgray);
+
+    border-radius: 10vh;
+}
+
+#headshot {
+
+    background-color: var(--maroon);
+    width: fit-content;
+
+    align-items: center;
+    border-radius: 10vw 0;
+    padding: 10vh;
+
+    margin: 5vh;
+}
+
+#headshot img {
+    width: 25vh;
+
+    user-select: none;
+
+    border-radius: 25vh;
+}
+
+#greeting {
+
+    padding: 5vh;
+
+    background-color: var(--brass);
+    color: var(--white);
+
+    border-radius: 0 10vh;
+    width: 40vw;
+
+    text-wrap: wrap;
+}
+
+#about-me {
+
+    margin-top: 4vh;
+    background-color: var(--lgray)
 }

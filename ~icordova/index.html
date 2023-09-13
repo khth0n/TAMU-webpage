@@ -26,160 +26,36 @@
 </head>
 <body>
 
-    <header>
-        <ic-navbar class="adaptive-flex-1"></ic-navbar>
-    </header>
+    <ic-navbar></ic-navbar>
 
-    <div class="adaptive-flex-1">
-        <div>Test 1</div>
-        <div>Test 2</div>
-        <div class="adaptive-flex-2">
-            <div>Test 3</div>
-            <div>Test 4</div>
-        </div>
-    </div>
+    <div id="main" class="vflex">
+        <div id="greeting-container" class="alt-hflex">
 
-    <div class="vflex">
+            <div id="headshot" class="vflex">
+                <img src="/~icordova/assets/Headshot.png" alt="">
+                <caption>
 
-        <div class="container">
-            <!--
-                Photo of Blue Ridge Mountains credit of photographer Ken Thomas
-                https://upload.wikimedia.org/wikipedia/commons/3/3c/Rainy_Blue_Ridge-27527.jpg
-            -->
-            <img src="/~icordova/assets/Blue Ridge.jpg" alt="">
-            <div class="overlay">Here is some sample text</div>
-        </div>
-        
-        <ic-typer json='
-        [
-            {
-                "action": "type",
-                "param": "Howdy!"
-            }
-        ]'
-        >
-            <h1 class="greeting"></h1>
-        </ic-typer>
-        <ic-typer json='
-        [
-            {
-                "action": "type",
-                "param": "My name is Isaiah Cordova."
-            },
-            {
-                "action": "select",
-                "param": "Isaiah Cordova"
-            }
-        ]'
-        '>
-            <h2 class="greeting"></h2>
-        </ic-typer>
-
-        <ic-typer json='
-        [
-            {
-                "action": "type",
-                "param": "It is a pleasure to meet you!"
-            }
-        ]'
-        '>
-        <h2 class="greeting"></h2>
-        </ic-typer>
-        <div class="hflex">
-            <div class="vflex">
-    
-                <div class="block">Test 2</div>
-                <a href="">Test 2</a>
+                    <h1>Isaiah Cordova</h1>
+                    <h2>Class of 2025</h2>
+                    <h2>Pursuing a B.S. in Computer Engineering</h2>
+                </caption>
             </div>
-            <a href="">Test</a>
+    
+            <div id="greeting">
+                <h1>Howdy! It is a pleasure to meet you!</h1>
+
+                <h2>I am a software developer, a computer engineer, and an Aggie</h2>
+                <h2>Some of my personal interests are AI/ML, Computer Vision, and Video Game Programming</h2>
+            </div>
         </div>
 
-        <h1>
-            Thank you very much for taking the time to read this.
-            If you are interested, please check out 
-            <a href="/~icordova/projects/index.html">my projects</a>
-            or
-            <a href="/~icordova/qualifications/index.html">my qualifications</a>
-        </h1>
+        <div id="contact-info" class="vflex">
+            <h1>Email (personal, preferred): <a href="mailto:isaiah.cordova21@gmail.com">isaiah.cordova21@gmail.com</a></h1>
+            <h1>Email (academic): <a href="mailto:icordova@tamu.edu">icordova@tamu.edu</a></h1>
+            <h1>Phone #: (571) 228-3088</h1>
+            <h1>LinkedIn: <a href="https://www.linkedin.com/in/icordova-eniac/">Link</a></h1>
+        </div>
     </div>
-
-    <ic-word-carousel stem="I am "
-        affixes="
-        an Aggie,
-        a Computer Engineer,
-        a Software Developer
-        ">
-    </ic-word-carousel>
-    <button id="test">Test</button>
-
-    <ic-word-carousel stem="I pride myself on "
-        affixes="
-        possessing experience from embedded systems to networking,
-        being passionate and up-to-date about technology,
-        being a skilled and experienced technical writer
-        ">
-    </ic-word-carousel>
-
-    <ic-word-carousel stem="My personal interests lie in "
-        affixes="
-        AI/ML,
-        Computer Vision,
-        Video Game Programming,
-        Software Optimization/Refactoring
-        ">
-    </ic-word-carousel>
-
-    <ic-timeline></ic-timeline>
-    
-    <p>My journey through software development</p>
-    <p>
-        Joined a club in middle school called CyberPatriots which taught me about Operating Systems
-        and basic computer security
-    </p>
-    <p>
-        In high school, around 10th grade, I had the opportunity to take courses
-        such as PLTW's Digital Electronics and some basic computer science courses
-    </p>
-    <p>
-        My first personal projects as a novice programmer included java swing
-        applications of Snake, Tetris, and Sudoku Solver
-    </p>
-    <p>
-        I joined my school's robotics club and participated in a number of
-        district and regional competitions as the only programmer on my
-        team.
-    </p>
-    <p>
-        For the remainder of my high school experience, I continued to pick up
-        programming knowledge and developed a couple of random
-        projects; some completed and others currently incomplete
-        until I had the chance to work on them at a later time. I also
-        became familiar with concepts related to computer network
-        architecture  
-    </p>
-    <p>
-        I applied to the Texas A&M College of Engineering and eventually
-        took up the Computer Engineering major with an emphasis in 
-        Computer Science
-    </p>
-    <p>
-        In my junior year of College, I participated in the Autodrive Project
-        at my campus as a programmer working to optimize vision and tracking
-        tasks with a combination of image processing and GPU programming.
-    </p>
-    <p>
-        I am currently looking for any internship opportunities,
-        particularly if they involve software development, networking,
-        or AI/ML.
-    </p>
-
-    <h1>
-        Thank you very much for taking the time to read this.
-        If you are interested, please check out 
-        <a href="/~icordova/projects/index.html">my projects</a>
-        or
-        <a href="/~icordova/qualifications/index.html">my qualifications</a>
-    </h1>
 
     <script defer type="module" src="/~icordova/src/index.js"></script> 
     <script defer type="module" src="/~icordova/src/templates/themeSelector.js"></script>
