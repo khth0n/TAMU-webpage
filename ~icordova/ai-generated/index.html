@@ -27,7 +27,89 @@
 <body>
     
     <ic-navbar class="flex"></ic-navbar>
+
+    <div id="generator">
+        <h2>Random Name Generator</h2>
+        <label for="length">Name Length:</label>
+        <input type="number" id="length" value="6" min="1" max="20">
+        <br>
+        <button id="generate">Generate Name</button>
+        <div id="result"></div>
+    </div>
+
+    <canvas id="perlinCanvas" width="512" height="512"></canvas>
+    <div>
+        <label for="scaleSlider">Scale:</label>
+        <input type="range" id="scaleSlider" min="0.01" max="0.5" step="0.01" value="0.05">
+    </div>
+
+    <h1>Generated Stories</h1>
+    <div id="story-container">
+        <p id="story-1"></p>
+        <p id="story-2"></p>
+    </div>
+    <button id="generate-button">Generate Stories</button>
+
+    <p>
+        This page was a foray into the potential of AI/ML and the ways it can be used by developers
+        productively. Had I implemented either the Random Name Generator or Story Generator by hand,
+        it would have taken much longer than simply using generative AI prompts to populate their
+        respective datasets to get a decently reasonable output. From what I have examined,
+        prompt engineering seems most reliable when you first ask about the objective or
+        problem you want to solve and then ask it to implement one of the ideas it references.
+        Using this system, and a continual question-response back-and-forth you can simulate
+        iteration by adding little features, additions, or changes you want to be conducted on
+        the code it previously generated. This has potential to dramatically reduce development time
+        or help in testing, particularly if there is a component that can leverage generative AI responses
+        such as a generic list of names or similar dummy data that ChatGPT might be able to reasonably
+        generate. Note that problems or projects that are more simple or common are significantly easier
+        to get in a single-shot as compared to more complex or uncommon problems, as demonstrated by
+        the Perlin Noise prompt compared to the two generator prompts.
+    </p>
+
+    <h1>Prompt List</h1>
+
+    <h2>Random Name Generator</h2>
+    <p>
+        1. what are some random name generation algorithms?
+        2. are you able to produce an random name generation algorithm in javascript?
+        3. can you create a random name generator that uses markov chains in typescript, preferably with a preloaded dataset of names
+        4. can you implement this without an npm package? (it attempted to include one, so I asked it to remove it)
+        5. can you now make a gui to generate random names using this algorithm with HTML and css?
+        6. can you now fill the dataset with 2000 names of cities from fantasy novels? (hilariously it gave up about 100 names in)
+        7. (I asked it slowly to add more names and some from different genres and specified unique since it began to add duplicates without it)
+        8. can you now remove repeated names from the dataset and add more unique ones?
+    </p>
+
+    <h2>Perlin Noise</h2>
+    <p>
+        1. do you know how to implement perlin noise in typescript (it responded with a 1D perlin noise algorithm)
+        2. can you make 2d perlin noise?
+        3. can you generate perlin noise and display it in an html canvas?
+        4. can you add sliders for controlling the perlin noise to this design?
+    </p>
+
+    <h2>Story Generator</h2>
+    <p>
+        1. what are some ways to procedurally generate a story?
+        2. do you know a way to procedurally generate a story with typescript?
+        3. do you know how to implement story grammers? (one of the methods provided from question 1)
+        4. do you know to procedurally generate plot elements? (another method provided from question 2, seems to have combined with output from question 3)
+        5. do you know how to implement template-based stories? (another method provided from question 2, seems to have combined with output from previous)
+        6. can you add more unique story templates to this?
+        7. can you add more unique characters?
+        8. can you add more unique goals?
+        9. can you combine all of this into one typescript file?
+        10. can you add more replace conditions for every possible story template? (this was the way I gamed it to update the conditions it was not updating)
+        11. can you now display these an html paragraph element?
+        12. can you add a button to generate the stories?
+    </p>
+
     <script defer src="/~icordova/src/templates/navbar.js" type="module"></script>
     <script defer type="module" src="/~icordova/src/templates/themeSelector.js"></script>
+
+    <script src="/~icordova/src/ai-generated/ai-random-name-gen.js"></script>
+    <script src="/~icordova/src/ai-generated/ai-perlin-noise.js"></script>
+    <script src="/~icordova/src/ai-generated/ai-storyteller.js"></script>
 </body>
 </html>

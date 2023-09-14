@@ -22,7 +22,7 @@ Shared CSS
 }
 
 body {
-    margin: 10vh 4vh;
+    margin: 10vh 2vw;
     background-color: var(--dgray);
 }
 
@@ -307,6 +307,31 @@ Landing Page CSS
 /*
 Projects Page CSS
 */
+
+.project {
+    
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.project-description {
+
+    background-color: var(--brass);
+
+    margin: 1vw;
+
+    width: fit-content;
+    text-wrap: wrap;
+}
+
+.project-info {
+
+    margin: 1vw;
+}
+
+.project-info img {
+    width: 40vw
+}
 
 /*
 Qualifications Page CSS
