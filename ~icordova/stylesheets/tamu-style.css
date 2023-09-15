@@ -410,6 +410,103 @@ Projects Page CSS
 Qualifications Page CSS
 */
 
+#resume-header {
+
+    background-color: var(--maroon);
+    color: var(--white);
+
+    margin: 0;
+
+    width: 100%;
+
+    border-radius: 10vh 0;
+    box-shadow: -1vh 1vh var(--dmaroon);
+
+    text-align: center;
+}
+
+#resume-container {
+
+    background-color: var(--lred);
+
+    margin-top: 5vh;
+
+    width: 100%;
+}
+
+#resume-container iframe {
+
+    padding: 1vh 0;
+
+    margin-top: 1vh;
+
+    border: none;
+    height: 80vh;
+}
+
+#technical-background {
+
+    width: 100%;
+}
+
+#technical-background h1 {
+
+    background-color: var(--maroon);
+    color: var(--white);
+
+    margin-bottom: 2vh;
+
+    text-align: center;
+
+    border-radius: 10vh 0;
+    box-shadow: -1vh 1vh var(--dmaroon);
+}
+
+#technical-skills {
+
+    background-color: var(--dblue);
+    color: var(--offwhite);
+
+    padding: 5%;
+    width: 40%;
+}
+
+.tech-skill {
+
+    background-color: var(--white);
+
+    margin: 5%;
+    padding: 5%;
+
+    border-radius: 0 10vh;
+    box-shadow: -1vh 1vh var(--lgray);
+}
+
+#technical-interests {
+
+    background-color: var(--lred);
+
+    padding: 5%;
+    width: 40%;
+}
+
+#technical-interests h1 {
+
+    border-radius: 0 10vh;
+    box-shadow: 1vh 1vh var(--dmaroon);
+}
+
+.tech-interest {
+
+    background-color: var(--white);
+
+    margin: 2%;
+    padding: 5%;
+
+    border-radius: 10vh 0;
+    box-shadow: 1vh 1vh var(--lgray);
+}
+
 /*
 Service Page CSS
 */

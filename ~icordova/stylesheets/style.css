@@ -378,6 +378,8 @@ Qualifications Page CSS
 
 #technical-background {
 
+    background-color: var(--offwhite);
+
     margin-top: 2vh;
     width: 100%;
 }
