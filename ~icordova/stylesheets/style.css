@@ -344,6 +344,38 @@ Projects Page CSS
 Qualifications Page CSS
 */
 
+#resume-header {
+
+    background-color: var(--dblue);
+    color: var(--offwhite);
+
+    margin: 0;
+
+    width: 100%;
+
+    text-align: center;
+}
+
+#resume-container {
+
+    background-color: var(--lred);
+    margin: 0;
+
+    width: 100%;
+}
+
+#resume-container iframe {
+
+    background-color: var(--offwhite);
+
+    padding: 1vh 0;
+
+    margin-top: 1vh;
+
+    border: none;
+    height: 80vh;
+}
+
 /*
 Service Page CSS
 */

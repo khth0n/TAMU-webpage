@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About Me</title>
+    <title>Qualifications</title>
     <link rel="shortcut icon" href="/~icordova/favicon.png" type="image/x-icon">
     <link id="theme" rel="stylesheet" href="/~icordova/stylesheets/style.css">
 
@@ -24,126 +24,118 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Fira+Code&family=Oswald&display=swap" rel="stylesheet">
 </head>
-<body>
+<body class="vflex">
 
     <ic-navbar class="flex"></ic-navbar>
 
-    <div id="resume" class="alt-hflex">
-        <div>
-            <h1>Resume</h1>
-            <p>This is a collection of my experiences.</p>
-        </div>
-        <iframe src="https://drive.google.com/file/d/1TpzfDZGSvjkhbd7JM-IB4PDzk9EpcimJ/preview" width="640" height="480" allow="autoplay"></iframe>
-    </div>
-    
-    <div class="alt-hflex">
+    <div id="resume-container" class="vflex ">
 
-        <div>
-            <h1>Present</h1>
-            <h1>Autodrive Challenge</h1>
+        <h1 id="resume-header">Resume</h1>
+        <iframe src="https://drive.google.com/file/d/1AiwRSpHY2LC69bV4ABsGZo90VupcLTf4/preview" width="100%" height="480" allow="autoplay"></iframe>
+    </div>
+
+    <div id="technical-skills">
+
+        <h1>Technical Experience</h1>
+
+        <div class="tech-skill">
+
+            <h2>Programming Experience</h2>
             <p>
-                The 12th Unmanned Team is an organization run by passionate students
-                and faculty alike, with participants of varying academic backgrounds and
-                experience who are working to achieve a safe, reliable, and robust autonomous
-                driving system for SAE International's Autodrive Challenge.
-                I joined the project as a volunteer during my junior year of attending
-                Texas A&M University out of personal interest in the subject and challenge
-                of autonomous driving, as well as personal curiousity over the computer control
-                systems used on modern automobiles.
-                My current responsibilities involve integrating and
-                optimizing the project's established code base to leverage GPU acceleration using Data Parallel C++.
-                Additionally, I have been learning about leveraging LiDAR sensor feedback and video-based image
-                processing for computer vision tasks related to object detection, recognition, and tracking.
+                Programming to me isn't so much about knowing languages anymore
+                as much as it being able to implement my ideas the easiest.
+
+                That said, I am the most familiar with JavaScript/Typescript, C/C++, Python,
+                and I regularly switch between them depending on the workload I am handling.
+
+                I do also have experience with x86_64 and ARM assembly from my education,
+                although I greatly prefer reduced instruction sets like ARM and RISC to
+                x86_64.
+
+                Nonetheless, I am also confident in learning any new programming languages relatively
+                quickly as needed.
             </p>
         </div>
-        <div>
 
-            <div>
-                <h1>Links:</h1>
-                <a href="http://autodrive.tamu.edu/">Project Website</a>
-                <a href="https://github.com/TAMU-Autodrive-II">GitHub Repo</a>
+        <div class="tech-skill">
+            
+            <h2>Experience Across Computing</h2>
+            <p>
+                I've had experience using Linux VMs, remote and local, for approximately 7 years
+                and during that time I've continually learned about that specific operating system.
+                Whether it be basic system and network managament, something more complex
+                like network programming on sockets, or using low-level driver APIs to leverage
+                hardware like GPUs, I've personally experimented with many facets of the Linux
+                operating system. Using this knowledge, I've spread out into learning IoT and
+                embedded systems with Raspberry Pi and how to leverage containerization in
+                establishing reliable environments.
+            </p>
+        </div>
+
+        <div class="tech-skill">
+            <h2>Full-Stack Development</h2>
+            <p>
+                I have quite a bit of experience working on a MEAN (MongoDB, Express, Angular, and Node.js)
+                stack for serving dynamic web content from simulating different types of network architectures
+                in virtual networks of VMs in an attempt to mimic realistic web traffic. NGINX was another
+                back-end technology that I've used before when stress testing and load balancing the simulated
+                web traffic. Although I only have very basic understanding of Angular from creating essentially
+                GUIs, I am confident about my abilities to use MongoDB, Express, and Node.js to built out a
+                functional back-end for just about any application.
+            </p>
+        </div>
+    </div>
+
+    <div id="technical-interests" class="vflex">
+
+        <h1>Technical Areas of Interest</h1>
+
+        <div class="tech-interest" class="alt-hflex">
+            <h2>AI/ML and Computer Vision</h2>
+            <p>
+                My interest in AI/ML is fairly related to Computer Vision. In many cases,
+                real-world computation requires the interface of hardware with software,
+                and a method of automatically interpreting information at an incredibly
+                fast rate. Given that there not absolute algorithms for every complex
+                problem, such as face tracking, motion tracking, etc. it becomes glaringly
+                apart where exactly AI/ML can come into play, particularly when paired with
+                an information-rich medium such as Computer Vision. 
+            </p>
+
+            <div class="tech-resources vflex">
+
+                <p>My favorite resources about the topic that I have read so far</p>
+                <a href="https://arxiv.org/abs/1706.03762">Attention Is All You Need</a>
+                <a href="https://arxiv.org/abs/2006.04439">Liquid Time-constant Networks</a>
+                <a href="https://arxiv.org/abs/2108.10346">Explaining Bayesian Neural Networks</a>
+                <a href="https://arxiv.org/abs/2106.13594">Bayesian Neural Networks: Essentials</a>
+            </div>
+        </div>
+
+        <div class="tech-interest">
+            <h2>Simulation Software Development</h2>
+            <p>
+                My interest in simulation mostly stems from the belief
+                that simulation of any kind can be generalized in a way to make it produce useful
+                information, whether it be for experimental or research purposes. This is
+                particularly true when elements may be abstracted away using gamification
+                as a vehicle to simplify complex problems into something that can be easily
+                simulated. I believe simulation is precisely the
+                methodology behind why evolutionary computing is fascinating,
+                and why it is responsible for a number of impressive and highly optimized
+                algorithms that don't require the computational complexity of a traditional
+                neural network or its training method.
+            </p>
+
+            <div class="tech-resources vflex">
+
+                <p>My favorite videos about simulation training AI using genetic algorithms</p>
+                <a href="https://www.youtube.com/watch?v=pwH7Afszma0">Pezzza's Work Drone Control Demo</a>
+                <a href="https://www.youtube.com/watch?v=hQ4ryudP4j8">Pezzza's Work NN GA Sim Training</a>
             </div>
         </div>
     </div>
 
-    <h1>Pre-College Experiences</h1>
-    <h2>These are </h2>
-    <div class="hflex">
-        <div>
-            <h1>FIRST Robotics FTC</h1>
-            <p>
-                I participated in the FIRST Robotics FIRST Tech Challenge competitions
-                from 2017-2019, participating in Relic Recovery and Rover Ruckus
-                for my high school's team, #11918 - Grizzly Bots.
-
-                With many of the founding members of the club leaving
-                the program after 2016, I joined the program to
-                help keep it alive despite my lackluster
-                understanding of computers at the time.
-
-                With a limited budget and small group of remaining upperclassmen,
-                I took up the lone role of learning how to write software for the
-                robot to run and give our team the best possible results at
-                competitions. 
-
-                At the time, I had little to no programming experience,
-                so I consider this club as my first experience with
-                programming in any capacity, and also my first
-                experience learning how software could interface
-                with hardware to perform various tasks in the real world.
-                    
-                In retrospect, I find that this club to be an endearing and
-                foundational experience in encouraging and motivating me to
-                learn more about computers in general, even if the results
-                I received were holistically disappointing at the time.
-            </p>
-        </div>
-    </div>
-
-    <div class="hflex">
-        <div>
-            <h1>YMCA Youth and Government</h1>
-            <p>
-                I was selected to represent my district at the annual
-                State Conference as a House Representative for the
-                2018-2019 and 2019-2020 program years.
-                    
-                I would consider my two finest achievements
-                within the program to be the two public policy
-                bills I created and defended regarding the restriction
-                of social media terms of service for minors and
-                consumer data privacy. Although not credited as
-                my bills directly, Texas HB4 and HB18 from the
-                88th Texas State Legislative Session are
-                eerily similar bills to the two that I
-                presented many years before it. For better or
-                worse, both bills passed both
-                chambers of Congress and were signed
-                into law by Governor Abbott, vindicating
-                my predictions about public policy within
-                the state of Texas. 
-
-                Overall, this program was instrumental in building my
-                public speaking, technical writing, argumentation, debate,
-                and etiquette skills as well as providing me a deeper
-                understanding of the American legislative process.
-            </p>
-        </div>
-        <div>
-            <h1>Links:</h1>
-            <a href="https://ymcatexasyg.org/program-sections/legislative/">About the Legislative YMCA Youth and Government Competition</a>
-
-        </div>
-    </div>
-
-
-    <a href="https://github.com/TAMU-Autodrive-II">Learn about TAMU Autodrive!</a>
-    <a href="https://www.sae.org/attend/student-events/autodrive-challenge">Learn about SAE International's Autodrive Challenge</a>
-    <a href="https://www.firstinspires.org/robotics/ftc">FIRST Robotics First Tech Challenge</a>
-
-    <a href="https://ymcatexasyg.org/program-sections/legislative/">Texas YMCA Youth & Government</a>
-
-    <a href="https://legiscan.com/TX/text/HB4/2023">Texas House Bill 4 from the 2023-2024 Legislative Session</a>
 
     <script defer type="module" src="/~icordova/src/templates/navbar.js"></script>
     <script defer type="module" src="/~icordova/src/templates/themeSelector.js"></script>
