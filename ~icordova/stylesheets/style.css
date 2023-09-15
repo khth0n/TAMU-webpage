@@ -405,6 +405,28 @@ Qualifications Page CSS
 Service Page CSS
 */
 
+.service-work {
+
+    align-items: center;
+}
+
+.service-work h1 {
+
+    background-color: var(--lred);
+
+    padding: 5%;
+    width: 40%;
+}
+
+.service-collection {
+
+    background-color: var(--dblue);
+    color: var(--offwhite);
+
+    padding: 5%;
+    width: 40%;
+}
+
 /*
 AI Generated Page CSS
 */
