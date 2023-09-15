@@ -376,6 +376,29 @@ Qualifications Page CSS
     height: 80vh;
 }
 
+#technical-background {
+
+    margin-top: 2vh;
+    width: 100%;
+}
+
+#technical-skills {
+
+    background-color: var(--dblue);
+    color: var(--offwhite);
+
+    padding: 5%;
+    width: 40%;
+}
+
+#technical-interests {
+
+    background-color: var(--lred);
+
+    padding: 5%;
+    width: 40%;
+}
+
 /*
 Service Page CSS
 */
