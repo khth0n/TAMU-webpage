@@ -430,3 +430,13 @@ Service Page CSS
 /*
 AI Generated Page CSS
 */
+
+#ai-generated-container {
+
+    background-color: var(--dblue);
+    color: var(--offwhite);
+
+    padding: 5%;
+
+    align-items: center;
+}
