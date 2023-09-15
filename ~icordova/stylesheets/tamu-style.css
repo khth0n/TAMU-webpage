@@ -308,29 +308,102 @@ Landing Page CSS
 Projects Page CSS
 */
 
-.project {
-    
+.project-container {
+
+    margin-bottom: 5vh;
+
+    width: 100%;
+
     align-items: center;
-    justify-content: space-evenly;
+}
+
+.project-header {
+
+    background-color: var(--maroon);
+    color: var(--white);
+
+    margin: 0;
+    margin-top: 6vh;
+
+    width: 100%;
+
+    border-radius: 10vh 0;
+    box-shadow: 1vh 1vh var(--dmaroon);
+
+    text-align: center;
+}
+
+.project {
+
+    margin-bottom: 1vh;
+
+    align-items: center;
+    justify-content: center;
+
+    width: 100%;
+}
+
+.project-status {
+
+    background-color: var(--brass);
+    color: var(--white);
+
+    margin-top: 2vh;
+    padding: 1vh;
+
+    width: 90%;
+
+    align-items: center;
+
+    border-radius: 0 10vh;
+    box-shadow: -1vh 1vh var(--lgray);
+}
+
+.project-status-links {
+
+    align-items: center;
 }
 
 .project-description {
 
-    background-color: var(--brass);
+    background-color: var(--white);
 
-    margin: 1vw;
+    margin-top: 2vh;
+    padding: 5vh;
+    width: 40%;
 
-    width: fit-content;
-    text-wrap: wrap;
+    border-radius: 0 10vh;
+    box-shadow: -1vh 1vh var(--lgray);
 }
 
 .project-info {
 
-    margin: 1vw;
+    padding: 2vh;
+    width: 47.5%;
+
+    align-items: center;
+
+    text-align: center;
 }
 
 .project-info img {
-    width: 40vw
+
+    width: 100%;
+
+    border-radius: 10vh 0;
+    box-shadow: 1vh 1vh var(--lgray);
+}
+
+.project-img-caption {
+
+    background-color: var(--maroon);
+    color: var(--white);
+
+    margin-top: 2vh;
+    padding: 3vh;
+
+    border-radius: 10vh 0;
+    box-shadow: -1vh 1vh var(--dmaroon);
 }
 
 /*
