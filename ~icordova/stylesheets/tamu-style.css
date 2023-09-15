@@ -511,6 +511,59 @@ Qualifications Page CSS
 Service Page CSS
 */
 
+.service-work {
+
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.service-work h1 {
+
+    background-color: var(--brass);
+    color: var(--white);
+
+    padding: 1%;
+    width: 45%;
+
+    border-radius: 10vh 0;
+    box-shadow: 1vh 1vh var(--lgray);
+}
+
+.service-work h2 {
+
+    background-color: var(--maroon);
+    color: var(--white);
+
+    padding: 5%;
+    width: 50%;
+
+    border-radius: 10vh 0;
+    box-shadow: 1vh 1vh var(--dmaroon);
+
+    align-self: center;
+}
+
+.service-collection {
+
+    background-color: var(--dblue);
+    color: var(--offwhite);
+
+    padding: 5%;
+    width: 40%;
+}
+
+.service-project p {
+
+    background-color: var(--white);
+
+    margin: 5%;
+    padding: 5%;
+
+    border-radius: 10vh 0;
+    box-shadow: -1vh 1vh var(--lgray);
+}
+
 /*
 AI Generated Page CSS
 */
